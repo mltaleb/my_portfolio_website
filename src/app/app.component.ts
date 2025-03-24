@@ -81,10 +81,7 @@ export class AppComponent {
   //   console.log(animationItem);
   // }
   toggleLanguage(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      console.log('Switching language to:');
-    } else {
-      console.log('Running on the server, no language switch.');
-    }
+    const newLang = this.translate.currentLang === 'en' ? 'fr' : 'en';
+    this.translate.use(newLang);
   }
 }

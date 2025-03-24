@@ -86,6 +86,29 @@ body {
   padding: 0 20px;
   width: 100%;
 }
+
+.floating-lang-btn {
+  position: fixed; /* Stays fixed on screen */
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #4b39ef;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s;
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.floating-lang-btn:hover {
+  background-color: #39d2c0;
+}
 /* /////////////Home/////////////// */
 #home {
   text-align: center;
@@ -440,6 +463,11 @@ p {
   .project-card {
     width: 100%;
   }
+  .floating-lang-btn {
+    right: 10px; /* Adjust position for small screens */
+    bottom: 10px;
+    z-index: 3000; /* Make sure it stays above the navbar */
+  }
 }
 @media (max-width: 450px) {
   /* 📌 Ensure Sections Fit on Small Screens */
@@ -524,5 +552,11 @@ p {
   .footer {
     font-size: 12px;
     padding: 10px;
+  }
+  .floating-lang-btn {
+    right: 10px; /* Adjust position for small screens */
+    bottom: 80px;
+    z-index: 3000; /* Make sure it stays above the navbar */
+    background-color: #39d2c0;
   }
 }

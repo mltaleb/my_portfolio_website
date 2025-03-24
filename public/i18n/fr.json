@@ -1,25 +1,48 @@
 {
-  "home": "Accueil",
-  "about": "À propos",
-  "projects": "Projets",
-  "contact": "Contact",
-  "GitHub": "GitHub",
-  "Hi, I'm": "Salut, je suis",
-  "Microsoft Power Platform & SharePoint Developer": "Développeur Power Platform & SharePoint",
-  "With expertise in": "Avec une expertise en",
-  "Power Apps": "Power Apps",
-  "Power Automate": "Power Automate",
-  "SharePoint": "SharePoint",
-  "I build business solutions that streamline workflows and boost productivity.": "Je crée des solutions qui optimisent les flux de travail et améliorent la productivité.",
-  "custom web, desktop, and mobile applications": "applications web, de bureau et mobiles sur mesure",
-  "Technologies I Use:": "Technologies que j'utilise :",
-  "Let's Connect": "Entrons en contact",
-  "Contact Me": "Contactez-moi",
-  "Send Message": "Envoyer un message",
-  "Name:": "Nom :",
-  "Email:": "E-mail :",
-  "Message:": "Message :",
-  "Message must be at least 10 characters long.": "Le message doit contenir au moins 10 caractères.",
-  "Please enter a valid email.": "Veuillez entrer un e-mail valide.",
-  "Name must be at least 3 characters long.": "Le nom doit contenir au moins 3 caractères."
+  "NAV": {
+    "HOME": "Accueil",
+    "ABOUT": "À propos",
+    "PROJECTS": "Projets",
+    "CONTACT": "Contact",
+    "GITHUB": "GitHub"
+  },
+  "HOME": {
+    "GREETING": "Bonjour, je suis Mohamed-Lamin Taleb",
+    "ROLE": "Développeur Microsoft Power Platform & SharePoint",
+    "INTROF": "Avec une expertise en",
+    "INTROS": "je conçois des solutions métier qui optimisent les flux de travail et augmentent la productivité.",
+    "SKILL1": "Power Apps",
+    "SKILL2": "Power Automate",
+    "SKILL3": "SharePoint",
+    "DESCRIPTION": "Je développe également des applications web, de bureau et mobiles sur mesure, combinant l'efficacité du low-code avec la flexibilité du code avancé pour offrir une expérience utilisateur fluide."
+  },
+  "ABOUT": {
+    "TITLE": "À propos de moi",
+    "INTRO": "Je suis Mohamed-Lamin Taleb, un développeur Microsoft Power Platform & SharePoint spécialisé dans les solutions métier et l'automatisation.",
+    "DESCRIPTION": "Je me spécialise dans la création de flux de travail avec Power Apps, Power Automate et SharePoint, ainsi que dans le développement d'applications web, de bureau et mobiles.",
+    "PASSION": "Passionné par l'innovation, je résous des problèmes concrets en combinant des solutions low-code avec du développement sur mesure.",
+    "TECH": "Technologies que j'utilise :",
+    "CONNECT": "Entrons en contact"
+  },
+  "PROJECTS": {
+    "TITLE": "Projets"
+  },
+  "CONTACT": {
+    "TITLE": "Contactez-moi",
+    "MESSAGE": "📧 Envoyez-moi un message ou contactez-moi via LinkedIn & WhatsApp.",
+    "NAME": "Nom",
+    "EMAIL": "Email",
+    "MESSAGE_LABEL": "Message",
+    "BUTTON": "Envoyer le message",
+    "ERROR": {
+      "NAME": "Le nom doit contenir au moins 3 caractères.",
+      "EMAIL": "Veuillez entrer un email valide.",
+      "MESSAGE": "Le message doit contenir au moins 10 caractères."
+    },
+    "LINKEDIN": "LinkedIn",
+    "WHATSAPP": "WhatsApp"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2025 Mon Site Web. Tous droits réservés."
+  }
 }

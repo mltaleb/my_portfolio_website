@@ -1,25 +1,50 @@
 {
-  "home": "Home",
-  "about": "About",
-  "projects": "Projects",
-  "contact": "Contact",
-  "GitHub": "GitHub",
-  "Hi, I'm": "Hi, I'm",
-  "Microsoft Power Platform & SharePoint Developer": "Microsoft Power Platform & SharePoint Developer",
-  "With expertise in": "With expertise in",
-  "Power Apps": "Power Apps",
-  "Power Automate": "Power Automate",
-  "SharePoint": "SharePoint",
-  "I build business solutions that streamline workflows and boost productivity.": "I build business solutions that streamline workflows and boost productivity.",
-  "custom web, desktop, and mobile applications": "custom web, desktop, and mobile applications",
-  "Technologies I Use:": "Technologies I Use:",
-  "Let's Connect": "Let's Connect",
-  "Contact Me": "Contact Me",
-  "Send Message": "Send Message",
-  "Name:": "Name:",
-  "Email:": "Email:",
-  "Message:": "Message:",
-  "Message must be at least 10 characters long.": "Message must be at least 10 characters long.",
-  "Please enter a valid email.": "Please enter a valid email.",
-  "Name must be at least 3 characters long.": "Name must be at least 3 characters long."
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact",
+    "GITHUB": "GitHub"
+  },
+  "HOME": {
+    "GREETING": "Hi, I'm Mohamed-Lamin Taleb",
+    "ROLE": "Microsoft Power Platform & SharePoint Developer",
+    "INTROF": "With expertise in",
+
+    "INTROS": "I build business solutions that streamline workflows and boost productivity.",
+    "SKILL1": "Power Apps",
+    "SKILL2": "Power Automate",
+    "SKILL3": "SharePoint",
+
+    "DESCRIPTION": "I also develop custom web, desktop, and mobile applications, blending low-code efficiency with high-code flexibility for seamless user experiences."
+  },
+  "ABOUT": {
+    "TITLE": "About Me",
+    "INTRO": "I'm Mohamed-Lamin Taleb, a Microsoft Power Platform & SharePoint Developer with expertise in business solutions and automation.",
+    "DESCRIPTION": "I specialize in creating workflows using Power Apps, Power Automate, and SharePoint, as well as developing web, desktop, and mobile apps.",
+    "PASSION": "Passionate about innovation, I solve real-world problems by blending low-code solutions with custom development.",
+    "TECH": "Technologies I Use:",
+    "CONNECT": "Let's Connect"
+  },
+  "PROJECTS": {
+    "TITLE": "Projects"
+  },
+  "CONTACT": {
+    "TITLE": "Contact Me",
+    "MESSAGE": "📧 Send me a message or reach out via LinkedIn & WhatsApp.",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "MESSAGE_LABEL": "Message",
+    "BUTTON": "Send Message",
+    "ERROR": {
+      "NAME": "Name must be at least 3 characters long.",
+      "EMAIL": "Please enter a valid email.",
+      "MESSAGE": "Message must be at least 10 characters long."
+    },
+    "LINKEDIN": "LinkedIn",
+    "WHATSAPP": "WhatsApp"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2025 My Website. All rights reserved."
+  }
 }

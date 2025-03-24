@@ -3,32 +3,51 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="app.component.css" />
 </head>
+<!-- Floating Language Button -->
+<div class="floating-lang-btn" (click)="toggleLanguage()">
+  <i class="fa-solid fa-globe"></i>
+</div>
+<div class="lottie-background">
+  <!-- <ng-lottie
+    [options]="options"
+    (animationCreated)="animationCreated($event)"
+  /> -->
+</div>
 
 <div class="container">
   <!-- Sidebar Navbar -->
   <nav class="sidebar">
     <ul>
       <li>
-        <a href="#home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+        <a href="#home">
+          <i class="fa-solid fa-house"></i>
+          <span>{{ "NAV.HOME" | translate }}</span>
+        </a>
       </li>
       <li>
-        <a href="#about"><i class="fa-solid fa-user"></i> <span>About</span></a>
+        <a href="#about">
+          <i class="fa-solid fa-user"></i>
+          <span>{{ "NAV.ABOUT" | translate }}</span>
+        </a>
       </li>
       <li>
-        <a href="#projects"
-          ><i class="fa-solid fa-briefcase"></i> <span>Projects</span></a
-        >
+        <a href="#projects">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>{{ "NAV.PROJECTS" | translate }}</span>
+        </a>
       </li>
       <li>
-        <a href="#contact"
-          ><i class="fa-solid fa-envelope"></i> <span>Contact</span></a
-        >
+        <a href="#contact">
+          <i class="fa-solid fa-envelope"></i>
+          <span>{{ "NAV.CONTACT" | translate }}</span>
+        </a>
       </li>
       <li>
         <a href="https://github.com/mltaleb" target="_blank">
-          <i class="fa-brands fa-github"></i> <span>GitHub</span>
+          <i class="fa-brands fa-github"></i>
+          <span>{{ "NAV.GITHUB" | translate }}</span>
         </a>
       </li>
     </ul>
@@ -37,78 +56,39 @@
   <!-- Main Content -->
   <div class="main-content">
     <section id="home" class="section">
-      <img
-        src="assets/profile.png"
-        alt="Mohamed-Lamin Taleb"
-        class="profile-img"
-      />
+      <img src="assets/profile.png" alt="Profile" class="profile-img" />
 
-      <h1>Hi, I'm <span class="highlight">Mohamed-Lamin Taleb</span></h1>
+      <h1>{{ "HOME.GREETING" | translate }}</h1>
 
       <p>
-        <span class="role"
-          >Microsoft Power Platform & SharePoint Developer</span
-        >
+        <span class="role">{{ "HOME.ROLE" | translate }}</span>
       </p>
 
       <p>
-        With expertise in <span class="skill">Power Apps</span>,
-        <span class="skill">Power Automate</span>, and
-        <span class="skill">SharePoint</span>, I build business solutions that
-        streamline workflows and boost productivity.
+        {{ "HOME.INTROF" | translate }}
+        <span class="skill">{{ "HOME.SKILL1" | translate }}</span
+        >, <span class="skill">{{ "HOME.SKILL2" | translate }}</span
+        >, and <span class="skill">{{ "HOME.SKILL3" | translate }}</span
+        >, {{ "HOME.INTROS" | translate }}
       </p>
 
-      <p>
-        I also develop
-        <span class="focus">custom web, desktop, and mobile applications</span>,
-        blending low-code efficiency with high-code flexibility for seamless
-        user experiences.
-      </p>
+      <p>{{ "HOME.DESCRIPTION" | translate }}</p>
     </section>
 
     <section id="about" class="section">
-      <h1>About Me</h1>
+      <h1>{{ "ABOUT.TITLE" | translate }}</h1>
 
       <div class="about-content">
-        <!-- Profile Image -->
-        <img
-          src="assets/profile.png"
-          alt="Mohamed-Lamin Taleb"
-          class="profile-img"
-        />
+        <img src="assets/profile.png" alt="Profile" class="profile-img" />
 
-        <!-- Bio & Experience -->
         <div class="about-text">
-          <p>
-            I'm <span class="highlight">Mohamed-Lamin Taleb</span>, a
-            <span class="role"
-              >Microsoft Power Platform & SharePoint Developer</span
-            >
-            with expertise in building
-            <span class="focus"
-              >business solutions, automation, and custom applications</span
-            >.
-          </p>
+          <p>{{ "ABOUT.INTRO" | translate }}</p>
 
-          <p>
-            I specialize in creating efficient workflows using
-            <span class="skill">Power Apps</span>,
-            <span class="skill">Power Automate</span>, and
-            <span class="skill">SharePoint</span>. Additionally, I develop
-            <span class="focus">web, desktop, and mobile applications</span> to
-            drive business success.
-          </p>
+          <p>{{ "ABOUT.DESCRIPTION" | translate }}</p>
 
-          <p>
-            Passionate about innovation, I love solving real-world problems by
-            blending
-            <span class="tech-stack">low-code</span> solutions with
-            <span class="tech-stack">custom development</span> for seamless
-            experiences.
-          </p>
+          <p>{{ "ABOUT.PASSION" | translate }}</p>
 
-          <!-- Skills & Tools -->
-          <h2>Technologies I Use:</h2>
+          <h2>{{ "ABOUT.TECH" | translate }}</h2>
           <div class="tech-icons">
             <img src="assets/icons/powerapps.png" alt="Power Apps" />
             <img src="assets/icons/powerautomate.png" alt="Power Automate" />
@@ -118,46 +98,37 @@
             <img src="assets/icons/flutter.png" alt="Flutter" />
           </div>
 
-          <!-- Call to Action -->
-          <a href="#contact" class="cta-button">Let's Connect</a>
+          <a href="#contact" class="cta-button">
+            {{ "ABOUT.CONNECT" | translate }}
+          </a>
         </div>
       </div>
     </section>
 
     <section id="projects" class="section">
-      <h1>Projects</h1>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Project 1</h3>
-          <p>Innovative web app development.</p>
-        </div>
-        <div class="project-card">
-          <h3>Project 2</h3>
-          <p>Creative mobile applications.</p>
-        </div>
-      </div>
+      <h1>{{ "PROJECTS.TITLE" | translate }}</h1>
     </section>
 
     <section id="contact" class="section">
-      <!-- <h1>{{ "Contact Me" | translate }}</h1> -->
-      <p>📧 Send me a message or reach out via LinkedIn & WhatsApp.</p>
+      <h1>{{ "CONTACT.TITLE" | translate }}</h1>
+      <p>{{ "CONTACT.MESSAGE" | translate }}</p>
 
       <form
         [formGroup]="contactForm"
         (ngSubmit)="submitForm()"
         class="contact-form"
       >
-        <label for="name">Name:</label>
+        <label for="name">{{ "CONTACT.NAME" | translate }}:</label>
         <input type="text" id="name" formControlName="name" required />
         <div
           *ngIf="
             contactForm.get('name')?.invalid && contactForm.get('name')?.touched
           "
         >
-          <small>Name must be at least 3 characters long.</small>
+          <small>{{ "CONTACT.ERROR.NAME" | translate }}</small>
         </div>
 
-        <label for="email">Email:</label>
+        <label for="email">{{ "CONTACT.EMAIL" | translate }}:</label>
         <input type="email" id="email" formControlName="email" required />
         <div
           *ngIf="
@@ -165,10 +136,10 @@
             contactForm.get('email')?.touched
           "
         >
-          <small>Please enter a valid email.</small>
+          <small>{{ "CONTACT.ERROR.EMAIL" | translate }}</small>
         </div>
 
-        <label for="message">Message:</label>
+        <label for="message">{{ "CONTACT.MESSAGE_LABEL" | translate }}:</label>
         <textarea id="message" formControlName="message" required></textarea>
         <div
           *ngIf="
@@ -176,27 +147,28 @@
             contactForm.get('message')?.touched
           "
         >
-          <small>Message must be at least 10 characters long.</small>
+          <small>{{ "CONTACT.ERROR.MESSAGE" | translate }}</small>
         </div>
 
         <button type="submit" [disabled]="contactForm.invalid">
-          Send Message
+          {{ "CONTACT.BUTTON" | translate }}
         </button>
       </form>
 
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/mltaleb" target="_blank">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
+          <i class="fa-brands fa-linkedin"></i>
+          {{ "CONTACT.LINKEDIN" | translate }}
         </a>
         <a href="https://wa.me/33634964036" target="_blank">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          <i class="fa-brands fa-whatsapp"></i>
+          {{ "CONTACT.WHATSAPP" | translate }}
         </a>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-      <p>© 2025 My Website. All rights reserved.</p>
+      <p>{{ "FOOTER.COPYRIGHT" | translate }}</p>
     </footer>
   </div>
 </div>
