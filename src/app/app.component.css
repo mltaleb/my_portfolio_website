@@ -1,5 +1,5 @@
-/* Import Poppins
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"); */
+/* //Import Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 /* Full-screen animated background */
 .lottie-background {
@@ -78,6 +78,7 @@ html,
 body {
   overflow-x: hidden;
   max-width: 100vw;
+  font-family: "Poppins", Poppins, Helvetica, Arial, sans-serif;
 }
 
 .container {
