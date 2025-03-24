@@ -1,0 +1,528 @@
+/* Import Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* Full-screen animated background */
+.lottie-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Ensures it stays behind all content */
+  overflow: hidden;
+}
+
+.lottie-background ngx-lottie {
+  width: 100%;
+  height: 100%;
+}
+
+/* Center content above the animation */
+.content {
+  position: relative;
+  text-align: center;
+  color: white; /* Adjust text color for readability */
+  padding: 50px;
+}
+.contact-form {
+  width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button:disabled {
+  background-color: gray;
+}
+
+small {
+  color: red;
+}
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #4b39ef, #39d2c0);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+/* 🛠️ Prevent Horizontal Scrolling */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 0 20px;
+  width: 100%;
+}
+/* /////////////Home/////////////// */
+#home {
+  text-align: center;
+}
+
+#home p {
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 10px auto;
+}
+
+.highlight {
+  color: #39d2c0;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 20px;
+  font-weight: 600;
+  color: #007bff; /* Blue for emphasis */
+}
+
+.skill {
+  font-weight: bold;
+  color: #ff9900; /* Orange for key skills */
+}
+
+.focus {
+  font-weight: bold;
+  color: #4caf50; /* Green for development focus */
+}
+/* ///////////////////////about////////////////// */
+
+/* About Me Section */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #39d2c0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+/* Text Styling */
+.about-text {
+  max-width: 600px;
+}
+
+.highlight {
+  color: #39d2c0;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 20px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.focus {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.skill {
+  font-weight: bold;
+  color: #ff9900;
+}
+
+.tech-stack {
+  font-weight: bold;
+  color: #8a2be2; /* Purple */
+}
+
+/* Tech Icons */
+.tech-icons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.tech-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Call to Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Sidebar (Navbar) */
+.sidebar {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.sidebar li {
+  margin: 25px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: rgb(147, 137, 137);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+.sidebar a i {
+  font-size: 24px;
+  transition: 0.3s;
+  opacity: 1; /* Always visible */
+}
+
+.sidebar a span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.sidebar a:hover {
+  color: #39d2c0;
+  transform: scale(1.1);
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  margin-left: 110px;
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  margin: 30px auto;
+  text-align: center;
+  width: 100%;
+  padding: 60px;
+  font-size: 18px;
+}
+
+/* Font Size Improvements */
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* Projects */
+.projects-grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 280px;
+}
+
+.project-card h3 {
+  font-size: 22px;
+}
+
+.project-card p {
+  font-size: 16px;
+}
+
+/* Contact */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.12);
+  backdrop-filter: blur(15px);
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #4b39ef;
+  transform: scale(1.1);
+}
+
+/* Footer - Aligned to Sections */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  width: 100%; /* Same width as sections */
+}
+
+/* 📌 Profile Image Styling */
+.profile-img {
+  width: 150px; /* Adjust size */
+  height: 150px;
+  border-radius: 50%; /* Full circle */
+  border: 5px solid #39d2c0; /* Large border with custom color */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  object-fit: cover; /* Ensures image covers the full area */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.profile-img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+@media (max-width: 768px) {
+  /* 📌 Convert Sidebar into a Bottom Navbar */
+  .sidebar {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(15px);
+    z-index: 1000; /* Ensures it's above everything */
+  }
+
+  .sidebar ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin: 0;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(147, 137, 137);
+    transition: 0.3s;
+  }
+
+  .sidebar a i {
+    font-size: 20px;
+  }
+
+  /* 🛠️ Adjust Main Content Position */
+  .main-content {
+    margin-left: 0;
+    margin-bottom: 70px; /* Prevent content from being hidden under navbar */
+  }
+
+  /* 📌 Adjust Sections for Mobile */
+  .section {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+
+  /* 📌 Make Contact Form & Projects Responsive */
+  .contact-form,
+  .projects-grid {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  /* 📌 Ensure Sections Fit on Small Screens */
+  .section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /* 📌 Ensure Text is Readable & Doesn't Overflow */
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* 📌 Profile Image Adjustments */
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #39d2c0;
+  }
+
+  /* 📌 Ensure About Section Text Fits */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-text {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* 📌 Contact Form & Input Fields */
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* 📌 Projects Grid */
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  /* 📌 Social Icons */
+  .social-icons {
+    gap: 8px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  /* 📌 Footer */
+  .footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
