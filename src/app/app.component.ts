@@ -6,7 +6,12 @@ import {
 } from '@angular/core';
 //import { AnimationItem } from 'lottie-web';
 //import { LottieComponent, AnimationOptions } from 'ngx-lottie';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import {
+  Firestore,
+  collection,
+  addDoc,
+  collectionData,
+} from '@angular/fire/firestore';
 import {
   FormBuilder,
   FormGroup,
@@ -16,7 +21,17 @@ import {
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
-import { RouterOutlet } from '@angular/router';
+import { Observable } from 'rxjs';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { log } from 'console';
+
+interface Project {
+  title: string;
+  description: string;
+  imageUrl: string;
+  videoUrl: string;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -28,13 +43,14 @@ export class AppComponent {
   private firestore: Firestore = inject(Firestore);
   private platformId = inject(PLATFORM_ID);
   isBrowser = isPlatformBrowser(this.platformId); // ✅ Check if running in browser
-
+  projects$: Observable<Project[]>; // ✅ Define and initialize as an Observable
+  selectedVideo: SafeResourceUrl | null = null;
   contactForm: FormGroup;
-
   constructor(
     private fb: FormBuilder,
     public translate: TranslateService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private sanitizer: DomSanitizer
   ) {
     console.log('isBrowser:', this.isBrowser);
 
@@ -46,6 +62,8 @@ export class AppComponent {
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
+    const projectsRef = collection(this.firestore, 'projects');
+    this.projects$ = collectionData(projectsRef) as Observable<Project[]>;
   }
   consoleTest() {
     console.log('Button clicked!');
@@ -84,4 +102,31 @@ export class AppComponent {
     const newLang = this.translate.currentLang === 'en' ? 'fr' : 'en';
     this.translate.use(newLang);
   }
+
+  playVideo(videoUrl: string) {
+    // Convert Google Drive link to embeddable format
+    const videoId = this.extractGoogleDriveId(videoUrl);
+    const embedUrl = videoId
+      ? `https://drive.google.com/file/d/${videoId}/preview`
+      : videoUrl;
+
+    this.selectedVideo =
+      this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
+  }
+
+  private extractGoogleDriveId(url: string): string | null {
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)\//);
+    return match ? match[1] : null;
+  }
+
+  closeVideo() {
+    this.selectedVideo = null;
+  }
+
+  // getGoogleDriveImageUrl(imageUrl: string): string {
+  //   const imageId = this.extractGoogleDriveId(imageUrl);
+  //   return imageId
+  //     ? `https://www.googleapis.com/drive/v3/files/${imageId}?alt=media&key=${apiKey}`
+  //     : imageUrl;
+  // }
 }

@@ -106,7 +106,36 @@
     </section>
 
     <section id="projects" class="section">
-      <h1>{{ "PROJECTS.TITLE" | translate }}</h1>
+      <div class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+          <div
+            *ngFor="let project of projects$ | async"
+            class="project-card"
+            (click)="playVideo(project.videoUrl)"
+          >
+            <img [src]="project.imageUrl" alt="{{ project.title }}" />
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Modal -->
+      <div class="video-modal" *ngIf="selectedVideo">
+        <div *ngIf="selectedVideo" class="video-overlay">
+          <video
+            [src]="selectedVideo"
+            controls
+            autoplay
+            width="640"
+            height="360"
+          >
+            Your browser does not support the video tag.
+          </video>
+          <button (click)="closeVideo()">Close</button>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="section">
